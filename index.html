@@ -16,11 +16,47 @@
 <!-- Ring artwork used by the falling animation -->
 <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
   <defs>
-    <linearGradient id="rg-pt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbfcfe"/><stop offset=".45" stop-color="#9eaabd"/><stop offset=".7" stop-color="#e6ebf2"/><stop offset="1" stop-color="#8794aa"/></linearGradient>
-    <linearGradient id="rg-au" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbeec4"/><stop offset=".45" stop-color="#c39a4a"/><stop offset=".7" stop-color="#f4dca0"/><stop offset="1" stop-color="#a97f32"/></linearGradient>
-    <radialGradient id="rg-sp" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#a9c2ff"/><stop offset=".5" stop-color="#2556e0"/><stop offset="1" stop-color="#0a2582"/></radialGradient>
-    <g id="rg-a"><circle cx="36" cy="50" r="22" fill="none" stroke="url(#rg-pt)" stroke-width="6.5"/><circle cx="36" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.5" stroke-dasharray="26 200" transform="rotate(200 36 50)"/></g>
-    <g id="rg-b"><circle cx="64" cy="50" r="22" fill="none" stroke="url(#rg-au)" stroke-width="6.5"/><circle cx="64" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="26 200" transform="rotate(20 64 50)"/><circle cx="78" cy="33" r="4.6" fill="url(#rg-sp)" stroke="#e9d9a8" stroke-width="1.2"/><circle cx="76.8" cy="31.8" r="1.1" fill="#fff"/></g>
+    <linearGradient id="rg-sv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".16" stop-color="#c3cad5"/><stop offset=".33" stop-color="#7d8696"/><stop offset=".5" stop-color="#f4f6f9"/><stop offset=".67" stop-color="#98a0ae"/><stop offset=".84" stop-color="#e0e5eb"/><stop offset="1" stop-color="#6a7280"/></linearGradient>
+    <linearGradient id="rg-sv2" href="#rg-sv" x1="1" y1="0" x2="0" y2="1"/>
+    <linearGradient id="rg-hi" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#dfe4ea"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <radialGradient id="rg-dg" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#dcebff"/><stop offset="1" stop-color="#8fb3e6"/></radialGradient>
+
+    <!-- diamond (round brilliant, top view) and its metal setting -->
+    <g id="rg-d">
+      <circle r="1" fill="url(#rg-dg)" stroke="#6f7d94" stroke-width=".14"/>
+      <path d="M0 -1V1M-1 0H1M-.71 -.71L.71 .71M.71 -.71L-.71 .71" stroke="#7da3dc" stroke-width=".07" opacity=".7" fill="none"/>
+      <polygon points="0,-.5 .35,-.35 .5,0 .35,.35 0,.5 -.35,.35 -.5,0 -.35,-.35" fill="#fff" fill-opacity=".55" stroke="#9fbfee" stroke-width=".06"/>
+    </g>
+    <g id="rg-s"><circle r="1.25" fill="url(#rg-sv2)" stroke="#4b5361" stroke-width=".12"/><use href="#rg-d"/></g>
+    <path id="rg-st" d="M0 -1.9Q.12 -.12 1.9 0Q.12 .12 0 1.9Q-.12 .12 -1.9 0Q-.12 -.12 0 -1.9Z" fill="#fff"/>
+
+    <!-- ring A: polished silver band with five flush-set diamonds -->
+    <g id="rg-a">
+      <circle cx="36" cy="50" r="22" fill="none" stroke="#434b59" stroke-width="7.4" stroke-opacity=".6"/>
+      <circle cx="36" cy="50" r="22" fill="none" stroke="url(#rg-sv)" stroke-width="6.5"/>
+      <circle cx="36" cy="50" r="22" fill="none" stroke="url(#rg-hi)" stroke-width="2.4" stroke-opacity=".8"/>
+      <circle cx="36" cy="50" r="22" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="30 200" transform="rotate(300 36 50)"/>
+      <use href="#rg-s" transform="translate(19.15 35.86) scale(2.5)"/>
+      <use href="#rg-s" transform="translate(15.32 42.48) scale(2.5)"/>
+      <use href="#rg-s" transform="translate(14 50) scale(2.5)"/>
+      <use href="#rg-s" transform="translate(15.32 57.52) scale(2.5)"/>
+      <use href="#rg-s" transform="translate(19.15 64.14) scale(2.5)"/>
+    </g>
+
+    <!-- ring B: polished silver band with a solitaire and four small diamonds -->
+    <g id="rg-b">
+      <circle cx="64" cy="50" r="22" fill="none" stroke="#434b59" stroke-width="7.4" stroke-opacity=".6"/>
+      <circle cx="64" cy="50" r="22" fill="none" stroke="url(#rg-sv2)" stroke-width="6.5"/>
+      <circle cx="64" cy="50" r="22" fill="none" stroke="url(#rg-hi)" stroke-width="2.4" stroke-opacity=".8"/>
+      <circle cx="64" cy="50" r="22" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="30 200" transform="rotate(100 64 50)"/>
+      <use href="#rg-s" transform="translate(64.77 28.02) scale(1.9)"/>
+      <use href="#rg-s" transform="translate(71.88 29.45) scale(1.9)"/>
+      <use href="#rg-s" transform="translate(82.86 38.67) scale(1.9)"/>
+      <use href="#rg-s" transform="translate(85.52 45.43) scale(1.9)"/>
+      <use href="#rg-s" transform="translate(78.14 33.15) scale(4.4)"/>
+      <use href="#rg-st" transform="translate(76.6 31.6) scale(2.3)"/>
+    </g>
+
     <clipPath id="rg-top"><rect x="40" y="18" width="20" height="28"/></clipPath>
     <symbol id="rings-pair" viewBox="0 0 100 100"><g transform="rotate(-16 50 50)"><use href="#rg-a"/><use href="#rg-b"/><use href="#rg-a" clip-path="url(#rg-top)"/></g></symbol>
   </defs>
